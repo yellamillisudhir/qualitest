@@ -1,6 +1,8 @@
 Feature: Launch Katalon Shop
 
-Background: Launch chrome browser
 Scenario: Validate items in the shopping cart
 
 Given I add four ramdon items to my cart
+When I view my cart
+Then I find total four items listed in my cart
+When I search for lowest price item

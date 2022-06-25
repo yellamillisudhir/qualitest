@@ -11,8 +11,18 @@ public class HomePage {
 	public HomePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-	@FindBy(how = How.XPATH, using = "//*[@id='main']/div[2]/ul/li[1]/div/a[2]")
-	private WebElement randomElement;
+	@FindBy(xpath ="(//button[@type='submit'])[2]")
+	public WebElement insideCart;
+	@FindBy(xpath ="//div[@class='menu']//a[contains(text(),'Cart')]")
+	public WebElement clickCart;
 	
 	
+	public void submitcart()
+	{
+		insideCart.click();
+	}
+	public void cartoncart()
+	{
+		clickCart.click();
+	}
 }

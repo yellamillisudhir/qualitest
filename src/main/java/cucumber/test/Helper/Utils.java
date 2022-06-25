@@ -1,6 +1,5 @@
 package cucumber.test.Helper;
 
-import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -21,14 +20,8 @@ public class Utils {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
 		driver.get("https://cms.demo.katalon.com/");
-	}
+		// return driver;
 
-	public int randomPick() {
-		int min = 1;
-		int max = 4;
-		Random random = new Random();
-		int value = random.nextInt(max + min) + min;
-		return value;
 	}
 
 }
